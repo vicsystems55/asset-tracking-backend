@@ -9,6 +9,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ApprovalStageController;
+use App\Http\Controllers\ContractorApplicationController;
 use App\Http\Controllers\VisitorProfileController;
 use App\Http\Controllers\SubmissionStatusController;
 use App\Http\Controllers\VisitorsSubmissionController;
@@ -42,6 +43,9 @@ Route::resource('departments', DepartmentController::class);
 Route::resource('offices', OfficeController::class);
 
 Route::resource('users', UserProfileController::class);
+
+Route::resource('contractor-applications', ContractorApplicationController::class);
+
 
 Route::get('/notifications', [NotificationController::class, 'index'])->middleware('auth:sanctum');
 

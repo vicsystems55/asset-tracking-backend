@@ -15,6 +15,12 @@ class CreateContractorApplicationsTable extends Migration
     {
         Schema::create('contractor_applications', function (Blueprint $table) {
             $table->id();
+            $table->string('contractor_name');
+            $table->string('contractor_address');
+            $table->string('rc_number');
+            $table->string('phone');
+            $table->string('email');
+            $table->text('brief');
             $table->timestamps();
         });
     }
